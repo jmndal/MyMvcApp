@@ -1,0 +1,27 @@
+@model IEnumerable<MyMvcApp.Models.Product>
+
+  <h2>Products</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Release Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var product in Model)
+      {
+      <tr>
+        <td>@product.Id</td>
+        <td>@product.Name</td>
+        <td>@product.Price</td>
+        <td>@product.ReleaseDate.ToShortDateString()</td>
+        <td><a href="/Home/Details/@product.Id">Details</a></td>
+      </tr>
+      }
+    </tbody>
+  </table>

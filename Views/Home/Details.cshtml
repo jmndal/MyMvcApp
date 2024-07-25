@@ -1,0 +1,17 @@
+@model MyMvcApp.Models.Product
+
+@{
+ViewData["Title"] = "Product Details";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Product Details</h1>
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+        <dt class="col-sm-3">Price</dt>
+        <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
+        <dt class="col-sm-3">Release Date</dt>
+        <dd class="col-sm-9">@Model.ReleaseDate.ToShortDateString()</dd>
+    </dl>
+</div>
